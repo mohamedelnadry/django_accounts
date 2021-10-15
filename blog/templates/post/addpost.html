@@ -1,0 +1,8 @@
+<a href="{% url 'Blog:allPosts' %}"><h1>welcome to my bage</h1></a>
+
+
+<form enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+    {{ from }}
+    <input type="submit">
+</form>

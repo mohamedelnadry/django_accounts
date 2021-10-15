@@ -1,0 +1,18 @@
+<h1>My profile</h1>
+
+<p>{{ myprofile.user.username }}</p>
+
+<p>{{ myprofile.user.email }}</p>
+
+<p>{{ myprofile.phone_number }}</p>
+
+<p>{{ myprofile.address }}</p>
+
+
+
+<hr>
+
+<a href="{% url 'accounts:profileEdit' %}"><p>Edit Profile</p></a>
+
+
+

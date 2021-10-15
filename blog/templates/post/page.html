@@ -1,0 +1,9 @@
+<a href="{% url 'Blog:allPosts' %}"><h1>welcome to my bage</h1></a>
+
+
+<a href="{% url 'Blog:addPost' %}"><h2>addPost</h2></a>
+
+
+{% for post in posts %}
+    <a href="{% url 'Blog:singlePost' post.id %}"><h3>{{post.title}}</h3></a>
+{% endfor %}

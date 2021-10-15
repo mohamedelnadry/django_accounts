@@ -1,0 +1,30 @@
+
+<a href="{% url 'Blog:allPosts' %}"><h1>welcome to my bage</h1></a>
+
+
+<a href="{% url 'Blog:editPost' posts.id %}"><h2>edit Post</h2></a>
+
+
+
+<p>{{posts.title}}</p>
+<p>{{posts.description}}</p>
+
+<p>{{posts.puplished}}</p>
+
+<img src="{{posts.img.url}}" alt="">
+<hr>
+{% for comment in comments %}
+    <hr>
+    <p><span>{{comment.author}}:</span> {{comment.text}}</p>
+    
+{% endfor %}
+
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ comment }}
+
+    <input type="submit" value="Add Comment">
+
+</form>
